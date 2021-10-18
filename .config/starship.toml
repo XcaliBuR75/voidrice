@@ -1,0 +1,20 @@
+add_newline = false
+scan_timeout = 10
+format = "$all"
+
+[package]
+disabled = true
+
+[line_break]
+disabled = true
+
+[directory]
+truncation_length = 3
+home_symbol = "~"
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+
+[git_branch]
+disabled = true
+
+[git_status]
+disabled = true
