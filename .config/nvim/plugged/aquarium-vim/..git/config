@@ -1,0 +1,14 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/frenzyexists/aquarium-vim.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "vimscript_version"]
+	remote = origin
+	merge = refs/heads/vimscript_version
+[branch "experiment"]
+	remote = origin
+	merge = refs/heads/experiment
