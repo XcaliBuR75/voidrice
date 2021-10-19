@@ -17,6 +17,18 @@ Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'justinmk/vim-sneak'
+"Plug 'morhetz/gruvbox'
+"Plug 'frenzyexists/aquarium-vim', { 'branch': 'experiment' }
+"Plug 'ayu-theme/ayu-vim'
+"Plug 'joshdick/onedark.vim'
+"Plug 'drewtempelmeyer/palenight.vim'
+"Plug 'rakr/vim-one'
+"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
+"Plug 'pacokwon/onedarkpaco.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 set title
@@ -29,6 +41,11 @@ set noshowmode
 set noruler
 set laststatus=0
 set noshowcmd
+set termguicolors " enable true colors support
+
+" General Settings
+set nobackup nowritebackup nocursorline
+set shiftwidth=4 autoindent smartindent tabstop=4 softtabstop=4 expandtab
 
 " Some basics:
 	nnoremap c "_c
@@ -36,7 +53,7 @@ set noshowcmd
 	filetype plugin on
 	syntax on
 	set encoding=utf-8
-	set number relativenumber
+	"set number relativenumber
 " Enable autocompletion:
 	set wildmode=longest,list,full
 " Disables automatic commenting on newline:
@@ -44,7 +61,7 @@ set noshowcmd
 " Perform dot commands over visual blocks:
 	vnoremap . :normal .<CR>
 " Goyo plugin makes text more readable when writing prose:
-	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
+	map <leader>f :Goyo \| set bg=dark \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
@@ -112,9 +129,9 @@ set noshowcmd
 	autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :Goyo\|q!<CR>
 
 " Automatically deletes all trailing whitespace and newlines at end of file on save.
-	autocmd BufWritePre * %s/\s\+$//e
-	autocmd BufWritePre * %s/\n\+\%$//e
-	autocmd BufWritePre *.[ch] %s/\%$/\r/e
+	"autocmd BufWritePre * %s/\s\+$//e
+	"autocmd BufWritePre * %s/\n\+\%$//e
+	"autocmd BufWritePre *.[ch] %s/\%$/\r/e
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
 	autocmd BufWritePost bm-files,bm-dirs !shortcuts
@@ -147,3 +164,38 @@ function! ToggleHiddenAll()
     endif
 endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
+
+" Setting vim-sneak label
+let g:sneak#label = 1
+
+" Airline theme
+"let g:airline_theme='material'
+let g:airline_theme='onedark'
+
+" Gruvbox Color Settigns
+"colorscheme gruvbox
+"set background=dark " Setting dark mode
+"let g:gruvbox_contrast_dark='dark'
+
+" Setting ayu-theme
+"let ayucolor='mirage'
+"colorscheme ayu
+
+" Colorscheme onedark
+"colorscheme palenight
+"set background=dark
+
+" Settings vim-one theme
+"colorscheme one
+"set background=dark
+
+" Dracula colorscheme
+"colorscheme dracula
+
+" Material theme
+let g:material_terminal_italics = 0
+let g:material_theme_style = 'palenight'
+colorscheme material
+
+" Pacokwon theme
+"colorscheme onedarkpaco
