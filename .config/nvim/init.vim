@@ -24,9 +24,10 @@ Plug 'justinmk/vim-sneak'
 "Plug 'joshdick/onedark.vim'
 "Plug 'drewtempelmeyer/palenight.vim'
 "Plug 'rakr/vim-one'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
 "Plug 'pacokwon/onedarkpaco.vim'
+Plug 'phanviet/vim-monokai-pro'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -169,7 +170,6 @@ nnoremap <leader>h :call ToggleHiddenAll()<CR>
 let g:sneak#label = 1
 
 " Airline theme
-"let g:airline_theme='material'
 let g:airline_theme='onedark'
 
 " Gruvbox Color Settigns
@@ -193,9 +193,12 @@ let g:airline_theme='onedark'
 "colorscheme dracula
 
 " Material theme
-let g:material_terminal_italics = 0
-let g:material_theme_style = 'palenight'
-colorscheme material
+"let g:material_terminal_italics = 0
+"let g:material_theme_style = 'palenight'
+"colorscheme material
 
 " Pacokwon theme
 "colorscheme onedarkpaco
+
+" Monokai Pro Theme
+colorscheme monokai_pro
