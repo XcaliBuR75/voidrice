@@ -139,7 +139,7 @@ content-foreground = ${colors.onedark-magenta}
 type = custom/text
 
 content = 
-content-foreground = ${colors.onedark-green}
+content-foreground = ${colors.onedark-magenta}
 
 [module/traysep]
 type = custom/text
