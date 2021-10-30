@@ -120,7 +120,7 @@ schemes:
 # Choose ONE color scheme from those available in the above list.
 colors: *dracula
 
-background_opacity: 1.0
+background_opacity: 0.2
 
 font:
   normal:
