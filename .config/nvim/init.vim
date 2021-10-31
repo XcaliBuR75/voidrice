@@ -18,15 +18,14 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'justinmk/vim-sneak'
-"Plug 'morhetz/gruvbox'
-"Plug 'frenzyexists/aquarium-vim', { 'branch': 'experiment' }
-"Plug 'ayu-theme/ayu-vim'
-"Plug 'joshdick/onedark.vim'
-"Plug 'drewtempelmeyer/palenight.vim'
-"Plug 'rakr/vim-one'
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'rakr/vim-one'
 Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
-"Plug 'pacokwon/onedarkpaco.vim'
+Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
+Plug 'pacokwon/onedarkpaco.vim'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline-themes'
