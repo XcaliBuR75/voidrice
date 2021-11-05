@@ -117,23 +117,51 @@ schemes:
       cyan:    '#59dffc'
       white:   '#e6e6d1'
 
-# Choose ONE color scheme from those available in the above list.
-colors: *dracula
+  # Monokai Pro
+  monokai_pro: &monokai_pro
+    primary:
+      background: '#2c2525'
+      foreground: '#fff1f3'
 
-background_opacity: 1.0
+  # Normal colors
+    normal:
+      black:   '#2c2525'
+      red:     '#fd6883'
+      green:   '#adda78'
+      yellow:  '#f9cc6c'
+      blue:    '#f38d70'
+      magenta: '#a8a9eb'
+      cyan:    '#85dacc'
+      white:   '#fff1f3'
+
+  # Bright colors
+    bright:
+      black:   '#72696a'
+      red:     '#fd6883'
+      green:   '#adda78'
+      yellow:  '#f9cc6c'
+      blue:    '#f38d70'
+      magenta: '#a8a9eb'
+      cyan:    '#85dacc'
+      white:   '#fff1f3'
+
+      # Choose ONE color scheme from those available in the above list.
+colors: *monokai_pro
+
+background_opacity: 0.2
 
 font:
   normal:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Regular
   bold:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Bold
   italic:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Italic
   bold_italic:
-    family: "Hack Nerd Font"
+    family: "JetBrainsMono Nerd Font"
     style: Bold Italic
 
   # Point size
