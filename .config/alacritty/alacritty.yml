@@ -121,7 +121,7 @@ schemes:
   monokai_pro: &monokai_pro
     primary:
       background: '#2c2525'
-      foreground: '#fff1f3'
+      foreground: '#fcfcfa'
 
   # Normal colors
     normal:
@@ -132,7 +132,7 @@ schemes:
       blue:    '#5ea2ec'
       magenta: '#ff46b0'
       cyan:    '#59dffc'
-      white:   '#fff1f3'
+      white:   '#fcfcfa'
 
   # Bright colors
     bright:
@@ -143,7 +143,7 @@ schemes:
       blue:    '#5ea2ec'
       magenta: '#ff46b0'
       cyan:    '#59dffc'
-      white:   '#fff1f3'
+      white:   '#fcfcfa'
 
       # Choose ONE color scheme from those available in the above list.
 colors: *monokai_pro

@@ -129,9 +129,9 @@ schemes:
       red:     '#fd6883'
       green:   '#adda78'
       yellow:  '#f9cc6c'
-      blue:    '#f38d70'
-      magenta: '#a8a9eb'
-      cyan:    '#85dacc'
+      blue:    '#5ea2ec'
+      magenta: '#ff46b0'
+      cyan:    '#59dffc'
       white:   '#fff1f3'
 
   # Bright colors
@@ -140,9 +140,9 @@ schemes:
       red:     '#fd6883'
       green:   '#adda78'
       yellow:  '#f9cc6c'
-      blue:    '#f38d70'
-      magenta: '#a8a9eb'
-      cyan:    '#85dacc'
+      blue:    '#5ea2ec'
+      magenta: '#ff46b0'
+      cyan:    '#59dffc'
       white:   '#fff1f3'
 
       # Choose ONE color scheme from those available in the above list.
