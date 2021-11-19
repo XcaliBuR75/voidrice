@@ -126,8 +126,8 @@ schemes:
   # Normal colors
     normal:
       black:   '#2c2525'
-      red:     '#fd6883'
-      green:   '#adda78'
+      red:     '#ff6188'
+      green:   '#a9dc76'
       yellow:  '#f9cc6c'
       blue:    '#5ea2ec'
       magenta: '#ff46b0'
@@ -138,7 +138,7 @@ schemes:
     bright:
       black:   '#72696a'
       red:     '#fd6883'
-      green:   '#adda78'
+      green:   '#a9dc76'
       yellow:  '#f9cc6c'
       blue:    '#5ea2ec'
       magenta: '#ff46b0'
