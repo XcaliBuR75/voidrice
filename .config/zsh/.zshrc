@@ -151,5 +151,8 @@ eval "$(starship init zsh)"
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
+## DTOS RANDOM COLOR SCRIPT ##
+#colorscript random
+
 # Load syntax highlighting; should be last.
 source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
