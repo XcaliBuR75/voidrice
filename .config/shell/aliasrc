@@ -25,8 +25,9 @@ alias \
 # Colorize commands when possible.
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
-	l="ptls -A" \
-	ll="ls -la" \
+    ls="lsd" \
+	l="lsd -A" \
+	ll="lsd -lA" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"

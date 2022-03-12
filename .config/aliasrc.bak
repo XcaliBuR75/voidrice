@@ -26,6 +26,7 @@ alias \
 alias \
 	ls="ls -hN --color=auto --group-directories-first" \
 	l="ptls -A" \
+	ll="ls -la" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
@@ -51,7 +52,6 @@ alias \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 
 # ptSh aliases
-alias ls="ptls"
 alias pwd="ptpwd"
 alias mkdir="ptmkdir"
 alias touch="pttouch"
