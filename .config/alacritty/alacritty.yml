@@ -148,7 +148,7 @@ schemes:
       # Choose ONE color scheme from those available in the above list.
 colors: *monokai_pro
 
-background_opacity: 0.8
+background_opacity: 1.0
 
 font:
   normal:
