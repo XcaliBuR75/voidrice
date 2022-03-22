@@ -148,20 +148,22 @@ schemes:
       # Choose ONE color scheme from those available in the above list.
 colors: *monokai_pro
 
-background_opacity: 1.0
+#background_opacity: 1.0
+window:
+  opacity: 1.0
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font"
-    style: Regular
+    family: "JetBrains Mono Nerd Font"
+    style: Medium
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Bold
   italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Italic
   bold_italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Bold Italic
 
   # Point size

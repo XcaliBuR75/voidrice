@@ -120,7 +120,7 @@ schemes:
   # Monokai Pro
   monokai_pro: &monokai_pro
     primary:
-      background: '#2c2525'
+      background: '#000000'
       foreground: '#fcfcfa'
 
   # Normal colors
@@ -129,7 +129,7 @@ schemes:
       red:     '#ff6188'
       green:   '#a9dc76'
       yellow:  '#f9cc6c'
-      blue:    '#5ea2ec'
+      blue:    '#bd93f9'
       magenta: '#ff46b0'
       cyan:    '#59dffc'
       white:   '#fcfcfa'
@@ -140,7 +140,7 @@ schemes:
       red:     '#fd6883'
       green:   '#a9dc76'
       yellow:  '#f9cc6c'
-      blue:    '#5ea2ec'
+      blue:    '#caa9fa'
       magenta: '#ff46b0'
       cyan:    '#59dffc'
       white:   '#fcfcfa'
@@ -148,20 +148,20 @@ schemes:
       # Choose ONE color scheme from those available in the above list.
 colors: *monokai_pro
 
-background_opacity: 0.2
+background_opacity: 1.0
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Regular
   bold:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Bold
   italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Italic
   bold_italic:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Nerd Font"
     style: Bold Italic
 
   # Point size
