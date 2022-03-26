@@ -2,7 +2,7 @@
 #             Corners           #
 #################################
 # requires: https://github.com/sdhand/compton
-corner-radius = 12;
+corner-radius = 7;
 rounded-corners-exclude = [
   #"window_type = 'normal'",
   "class_g = 'Rofi'",
@@ -43,8 +43,8 @@ round-borders-rule = [
 # (windows with '_NET_WM_WINDOW_TYPE_DESKTOP') never get shadow,
 # unless explicitly requested using the wintypes option.
 #
- shadow = false
-#shadow = true;
+# shadow = false
+shadow = false;
 
 # The blur radius for shadows, in pixels. (defaults to 12)
 # shadow-radius = 12
@@ -55,11 +55,11 @@ shadow-opacity = 0.75
 
 # The left offset for shadows, in pixels. (defaults to -15)
 # shadow-offset-x = -15
-shadow-offset-x = -15;
+shadow-offset-x = -7;
 
 # The top offset for shadows, in pixels. (defaults to -15)
 # shadow-offset-y = -15
-shadow-offset-y = -15;
+shadow-offset-y = -7;
 
 # Avoid drawing shadows on dock/panel windows. This option is deprecated,
 # you should use the *wintypes* option in your config file instead.
@@ -129,14 +129,14 @@ fading = false;
 
 # Opacity change between steps while fading in. (0.01 - 1.0, defaults to 0.028)
 # fade-in-step = 0.028
-fade-in-step = 0.015;
+fade-in-step = 0.03;
 
 # Opacity change between steps while fading out. (0.01 - 1.0, defaults to 0.03)
 # fade-out-step = 0.03
-fade-out-step = 0.1;
+fade-out-step = 0.03;
 
 # The time between steps in fade step, in milliseconds. (> 0, defaults to 10)
-fade-delta = 10
+fade-delta = 4
 
 # Specify a list of conditions of windows that should not be faded.
 # don't need this, we disable fading for all normal windows with wintypes: {}
@@ -158,11 +158,11 @@ fade-exclude = [
 
 # Opacity of inactive windows. (0.1 - 1.0, defaults to 1.0)
 # inactive-opacity = 1
-inactive-opacity = 1;
+inactive-opacity = 0.8;
 
 # Opacity of window titlebars and borders. (0.1 - 1.0, disabled by default)
 # frame-opacity = 1.0
-frame-opacity = 1.0;
+frame-opacity = 0.7;
 
 # Default opacity for dropdown menus and popup menus. (0.0 - 1.0, defaults to 1.0)
 # menu-opacity = 1.0
@@ -201,7 +201,8 @@ opacity-rule = [
   "10:class_g    = 'eww-blur_full'",            # maim
   #"100:class_g    = 'XTerm'",
   #"100:class_g    = 'URxvt'",
-  "75:class_g    = 'Alacritty'",
+  "80:class_g    = 'Alacritty' && focused",
+  "70:class_g    = 'Alacritty' && !focused",
   #"60:class_g    = 'eww-player'",
   "100:class_g    = 'Tint2'"
   #"80:class_g     = 'Polybar'",
@@ -227,7 +228,7 @@ opacity-rule = [
 
 # Blur background of semi-transparent / ARGB windows.
 #
-#blur-background = true;
+blur-background = true;
 
 # Blur background of windows when the window frame is not opaque.
 # Implies:
@@ -252,8 +253,8 @@ blur: {
   # requires: https://github.com/ibhagwan/picom
   method = "dual_kawase";
   #method = "kernel";
-  strength = 6;
-  deviation = 1.0;
+  strength = 4;
+  #deviation = 1.0;
   # kernel = "11x11gaussian";
   background = true;
   background-frame = false;
@@ -267,6 +268,7 @@ blur-background-exclude = [
   #"window_type = 'desktop'",
   #"class_g = 'URxvt'",
   "class_g = 'dwm'",
+  "class_g = 'Alacritty'",
   #
   # prevents picom from blurring the background
   # when taking selection screenshot with `main`
@@ -293,7 +295,7 @@ backend = "glx";
 
 # Enable/disable VSync.
 # vsync = false
-vsync = true
+vsync = false
 
 # Enable remote control via D-Bus. See the *D-BUS API* section below for more details.
 # dbus = false
@@ -388,7 +390,7 @@ detect-client-leader = true
 # practically happened) and may not work with blur-background.
 # My tests show a 15% performance boost. Recommended.
 #
-# glx-no-stencil = false
+glx-no-stencil = true
 
 # GLX backend: Avoid rebinding pixmap on window damage.
 # Probably could improve performance on rapid window content changes,
