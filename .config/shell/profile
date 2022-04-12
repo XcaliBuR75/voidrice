@@ -65,6 +65,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 # Adds go and customs dirs to $PATH
 export PATH="$PATH:$HOME/bin:$GOPATH/bin:$HOME/etc/scripts"
 
+# Set bat default theme
+export BAT_THEME="Dracula"
+
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\
 fi=:\
