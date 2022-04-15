@@ -93,7 +93,7 @@ schemes:
       black:   '#000000'
       red:     '#ff5555'
       green:   '#50fa7b'
-      yellow:  '#f1fa8c'
+      yellow:  '#F1FA8C'
       blue:    '#bd93f9'
       magenta: '#ff79c6'
       cyan:    '#8be9fd'
@@ -146,9 +146,9 @@ schemes:
       white:   '#fcfcfa'
 
       # Choose ONE color scheme from those available in the above list.
-colors: *monokai_pro
+colors: *dracula
 
-#background_opacity: 1.0
+  #background_opacity: 1.0
 window:
   opacity: 1.0
 
