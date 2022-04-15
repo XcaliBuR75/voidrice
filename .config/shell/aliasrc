@@ -30,6 +30,7 @@ alias \
 	ll="lsd -lA" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
+	cat="bat -pp" \
 	ccat="highlight --out-format=ansi"
 
 # These common commands are just too long! Abbreviate them.

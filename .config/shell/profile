@@ -67,6 +67,7 @@ export PATH="$PATH:$HOME/bin:$GOPATH/bin:$HOME/etc/scripts"
 
 # Set bat default theme
 export BAT_THEME="Dracula"
+export BAT_PAGER=""
 
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\
