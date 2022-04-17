@@ -1,4 +1,5 @@
 let mapleader =","
+" let mapleader ="\<space>"
 
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -169,7 +170,7 @@ nnoremap <leader>h :call ToggleHiddenAll()<CR>
 let g:sneak#label = 1
 
 " Airline theme
-let g:airline_theme='onedark'
+let g:airline_theme='dracula'
 
 " Gruvbox Color Settigns
 "colorscheme gruvbox
@@ -189,7 +190,7 @@ let g:airline_theme='onedark'
 "set background=dark
 
 " Dracula colorscheme
-"colorscheme dracula
+colorscheme dracula
 
 " Material theme
 "let g:material_terminal_italics = 0
@@ -200,4 +201,4 @@ let g:airline_theme='onedark'
 "colorscheme onedarkpaco
 
 " Monokai Pro Theme
-colorscheme monokai_pro
+"colorscheme monokai_pro
