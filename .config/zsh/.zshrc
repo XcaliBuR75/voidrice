@@ -3,7 +3,7 @@
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-PS1="%B%{$fg[magenta]%}%~ %{$reset_color%}%{$fg[green]%}>%b "
+#PS1="%B%{$fg[magenta]%}%~ %{$reset_color%}%{$fg[green]%}>%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -144,9 +144,6 @@ SPACESHIP_JOBS_SHOW=false
 #autoload -U promptinit; promptinit
 #prompt spaceship
 
-# Initialize starship prompt
-eval "$(starship init zsh)"
-
 # Case Insensitive Tab Completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
@@ -156,3 +153,6 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # Load syntax highlighting; should be last.
 source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+
+# Initialize starship prompt
+eval "$(starship init zsh)"
