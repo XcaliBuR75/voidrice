@@ -93,7 +93,8 @@ bindkey -s '^o' 'lfcd\n'
 
 bindkey -s '^a' 'bc -lq\n'
 
-bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+bindkey -s '^f' 'cd "$(dirname "$(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")")"\n'
+#bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
