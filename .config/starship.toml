@@ -15,7 +15,7 @@ $line_break\
 $character"""
 
 [directory]
-style = "blue"
+style = "cyan"
 
 [character]
 success_symbol = "[❯](purple)"
