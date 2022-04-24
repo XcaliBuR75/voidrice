@@ -93,8 +93,11 @@ bindkey -s '^o' 'lfcd\n'
 
 bindkey -s '^a' 'bc -lq\n'
 
-bindkey -s '^f' 'cd "$(dirname "$(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")")"\n'
-#bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
+#bindkey -s '\ea' 'cd "$(dirname "$(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")")"\n'
+#bindkey -s '\ep' ' $(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")'
+bindkey -s '\ea' 'cat $(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
+bindkey -s '\es' 'v $(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
+bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
@@ -103,7 +106,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 # fzf completion and keybindings
-source /usr/share/fzf/key-bindings.zsh 2>/dev/null
+source ~/.config/fzf/key-bindings.zsh 2>/dev/null
 
 # zsh autosuggestions plugin instalation
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
