@@ -104,8 +104,8 @@ bindkey -M viins '\ed' fzf-file1-widget
 
 # ALT-O - cd into the selected directory
 fzf-cd-widget() {
-  local cmd="${FZF_ALT_O_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.git*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
-    -o -type d -print 2> /dev/null | cut -b3-"}"
+  local cmd="${FZF_ALT_O_COMMAND:-"command find -L $HOME -mindepth 1 \\( -path '*/\\.git*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
+    -o -type d -print 2> /dev/null | cut -b2-"}"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_O_OPTS" $(__fzfcmd) +m)"
   if [[ -z "$dir" ]]; then
@@ -113,7 +113,7 @@ fzf-cd-widget() {
     return 0
   fi
   zle push-line # Clear buffer. Auto-restored on next prompt.
-  BUFFER="cd ${(q)dir} && l"
+  BUFFER="cd /${(q)dir} && l"
   zle accept-line
   local ret=$?
   unset dir # ensure this doesn't end up appearing in prompt expansion
@@ -127,8 +127,8 @@ bindkey -M viins '\eo' fzf-cd-widget
 
 # ALT-P - cd into the selected directory
 fzf-cdh-widget() {
-  local cmd="${FZF_ALT_P_COMMAND:-"command find -L $HOME -mindepth 1 \\( -path '*/\\.git*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
-    -o -type d -print 2> /dev/null | cut -b2-"}"
+  local cmd="${FZF_ALT_P_COMMAND:-"command find -L . -mindepth 1 \\( -path '*/\\.git*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
+    -o -type d -print 2> /dev/null | cut -b3-"}"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local dir="$(eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_P_OPTS" $(__fzfcmd) +m)"
   if [[ -z "$dir" ]]; then
@@ -136,7 +136,7 @@ fzf-cdh-widget() {
     return 0
   fi
   zle push-line # Clear buffer. Auto-restored on next prompt.
-  BUFFER="cd /${(q)dir} && l"
+  BUFFER="cd ${(q)dir} && l"
   zle accept-line
   local ret=$?
   unset dir # ensure this doesn't end up appearing in prompt expansion
@@ -157,6 +157,7 @@ fzf-history-widget() {
   local ret=$?
   if [ -n "$selected" ]; then
     num=$selected[1]
+    zle accept-line
     if [ -n "$num" ]; then
       zle vi-fetch-history -n $num
     fi
@@ -165,9 +166,9 @@ fzf-history-widget() {
   return $ret
 }
 zle     -N            fzf-history-widget
-bindkey -M emacs '^R' fzf-history-widget
-bindkey -M vicmd '^R' fzf-history-widget
-bindkey -M viins '^R' fzf-history-widget
+bindkey -M emacs '\e ' fzf-history-widget
+bindkey -M vicmd '\e ' fzf-history-widget
+bindkey -M viins '\e ' fzf-history-widget
 
 } always {
   eval $__fzf_key_bindings_options
