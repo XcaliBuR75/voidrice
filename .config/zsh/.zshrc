@@ -155,6 +155,9 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 ## DTOS RANDOM COLOR SCRIPT ##
 #colorscript random
 
+## Replace zsh's default completion selection menu with fzf!
+source ~/.config/fzf-tab/fzf-tab.plugin.zsh
+
 # Load syntax highlighting; should be last.
 source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
