@@ -5,6 +5,9 @@ autoload -U colors && colors	# Load colors
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 #PS1="%B%{$fg[magenta]%}%~ %{$reset_color%}%{$fg[green]%}>%b "
 setopt autocd		# Automatically cd into typed directory.
+setopt histfindnodups		# Do not display duplicates of a line previously found, even if the duplicates are not contiguous.
+setopt histignorespace      #Remove command lines from the history when the first character on the line is a space.
+setopt histignorealldups    #If a new command line being added to the history list duplicates an older one, the older command is removed from the list.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
@@ -158,8 +161,8 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 ## Replace zsh's default completion selection menu with fzf!
 source ~/.config/fzf-tab/fzf-tab.plugin.zsh
 
-# Load syntax highlighting; should be last.
-source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
-
 # Initialize starship prompt
 eval "$(starship init zsh)"
+
+# Load syntax highlighting; should be last.
+source ~/.config/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
