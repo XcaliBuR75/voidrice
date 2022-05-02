@@ -45,7 +45,7 @@ __fsel() {
   setopt localoptions pipefail no_aliases 2> /dev/null
   local item
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_L_OPTS" $(__fzfcmd) -m "$@" | while read item; do
-    echo -n "${(q)item} "
+    echo -n "${(q)item}"
   done
   local ret=$?
   echo
@@ -77,7 +77,7 @@ __fsel1() {
   setopt localoptions pipefail no_aliases 2> /dev/null
   local item
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore $FZF_DEFAULT_OPTS $FZF_ALT_D_OPTS" $(__fzfcmd) -m "$@" | while read item; do
-    echo -n "${(q)item} "
+    echo -n "${(q)item}"
   done
   local ret=$?
   echo
