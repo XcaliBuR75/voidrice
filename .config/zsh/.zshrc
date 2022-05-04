@@ -8,6 +8,7 @@ setopt autocd		# Automatically cd into typed directory.
 setopt histfindnodups		# Do not display duplicates of a line previously found, even if the duplicates are not contiguous.
 setopt histignorespace      #Remove command lines from the history when the first character on the line is a space.
 setopt histignorealldups    #If a new command line being added to the history list duplicates an older one, the older command is removed from the list.
+setopt incappendhistory     #new history lines are added to the $HISTFILE incrementally (as soon as they are entered).
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
