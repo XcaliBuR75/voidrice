@@ -30,6 +30,8 @@ Plug 'pacokwon/onedarkpaco.vim'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set title
@@ -171,6 +173,17 @@ let g:sneak#label = 1
 
 " Airline theme
 let g:airline_theme='dracula'
+
+" Add namespace for fzf.vim exported commands
+let g:fzf_command_prefix = 'Fzf'
+
+" [Buffers] Jump to the existing window if posible
+let g:fzf_buffers_jump = 1
+
+" Mappings
+nnoremap <silent> <A-o> :FzfFiles ~<CR>
+nnoremap <silent> <A-l> :FzfBLines<CR>
+nnoremap <silent> <A-b> :FzfBuffers<CR>
 
 " Gruvbox Color Settigns
 "colorscheme gruvbox

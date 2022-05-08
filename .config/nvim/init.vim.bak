@@ -1,4 +1,5 @@
 let mapleader =","
+" let mapleader ="\<space>"
 
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -18,15 +19,15 @@ Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'justinmk/vim-sneak'
-"Plug 'morhetz/gruvbox'
-"Plug 'frenzyexists/aquarium-vim', { 'branch': 'experiment' }
-"Plug 'ayu-theme/ayu-vim'
-"Plug 'joshdick/onedark.vim'
-"Plug 'drewtempelmeyer/palenight.vim'
-"Plug 'rakr/vim-one'
-"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+Plug 'ayu-theme/ayu-vim'
+Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'rakr/vim-one'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'Kaicataldo/material.vim', { 'branch': 'main' }
-"Plug 'pacokwon/onedarkpaco.vim'
+Plug 'pacokwon/onedarkpaco.vim'
+Plug 'phanviet/vim-monokai-pro'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
@@ -169,8 +170,7 @@ nnoremap <leader>h :call ToggleHiddenAll()<CR>
 let g:sneak#label = 1
 
 " Airline theme
-"let g:airline_theme='material'
-let g:airline_theme='onedark'
+let g:airline_theme='dracula'
 
 " Gruvbox Color Settigns
 "colorscheme gruvbox
@@ -190,12 +190,15 @@ let g:airline_theme='onedark'
 "set background=dark
 
 " Dracula colorscheme
-"colorscheme dracula
+colorscheme dracula
 
 " Material theme
-let g:material_terminal_italics = 0
-let g:material_theme_style = 'palenight'
-colorscheme material
+"let g:material_terminal_italics = 0
+"let g:material_theme_style = 'palenight'
+"colorscheme material
 
 " Pacokwon theme
 "colorscheme onedarkpaco
+
+" Monokai Pro Theme
+"colorscheme monokai_pro
