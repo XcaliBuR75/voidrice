@@ -18,7 +18,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
-Plug 'justinmk/vim-sneak'
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim'
 Plug 'joshdick/onedark.vim'
@@ -35,7 +34,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set title
-set bg=light
+set bg=dark
 set go=a
 set mouse=a
 set nohlsearch
@@ -168,9 +167,6 @@ function! ToggleHiddenAll()
 endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
 
-" Setting vim-sneak label
-let g:sneak#label = 1
-
 " Airline theme
 let g:airline_theme='dracula'
 
@@ -182,8 +178,8 @@ let g:fzf_buffers_jump = 1
 
 " Mappings
 nnoremap <silent> <A-o> :FzfFiles ~<CR>
-nnoremap <silent> <A-l> :FzfBLines<CR>
-nnoremap <silent> <A-b> :FzfBuffers<CR>
+nnoremap <silent> s :FzfBLines<CR>
+nnoremap <silent> <A-l> :FzfBuffers<CR>
 
 " Gruvbox Color Settigns
 "colorscheme gruvbox
