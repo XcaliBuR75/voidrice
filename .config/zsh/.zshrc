@@ -99,8 +99,8 @@ bindkey -s '^a' 'bc -lq\n'
 
 #bindkey -s '\ea' 'cd "$(dirname "$(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")")"\n'
 #bindkey -s '\ep' ' $(fzf --preview "bat --color=always --style=plain --line-range=:500 {}")'
-bindkey -s '\ea' 'cat $(fzf --reverse --cycle --bind 'tab:toggle-down,btab:toggle-up' --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
-bindkey -s '\es' 'v $(fzf --reverse --cycle --bind 'tab:toggle-down,btab:toggle-up' --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
+bindkey -s '\ea' 'cat $(fzf --reverse --height=50% --cycle --bind 'tab:toggle-down,btab:toggle-up' --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
+bindkey -s '\es' 'v $(fzf --reverse --height=50% --cycle --bind 'tab:toggle-down,btab:toggle-up' --preview "bat --color=always --style=plain --line-range=:500 {}")\n'
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
