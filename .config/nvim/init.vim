@@ -29,6 +29,7 @@ Plug 'pacokwon/onedarkpaco.vim'
 Plug 'phanviet/vim-monokai-pro'
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -168,7 +169,7 @@ endfunction
 nnoremap <leader>h :call ToggleHiddenAll()<CR>
 
 " Airline theme
-let g:airline_theme='dracula'
+let g:airline_theme='fruit_punch'
 
 " Add namespace for fzf.vim exported commands
 let g:fzf_command_prefix = 'Fzf'
@@ -178,7 +179,7 @@ let g:fzf_buffers_jump = 1
 
 " Mappings
 nnoremap <silent> <A-o> :FzfFiles ~<CR>
-nnoremap <silent> s :FzfBLines<CR>
+nnoremap <silent>  s :FzfBLines<CR>
 nnoremap <silent> <A-l> :FzfBuffers<CR>
 
 " Gruvbox Color Settigns
@@ -199,7 +200,7 @@ nnoremap <silent> <A-l> :FzfBuffers<CR>
 "set background=dark
 
 " Dracula colorscheme
-colorscheme dracula
+"colorscheme dracula
 
 " Material theme
 "let g:material_terminal_italics = 0
@@ -211,3 +212,6 @@ colorscheme dracula
 
 " Monokai Pro Theme
 "colorscheme monokai_pro
+
+" Vim Script
+colorscheme catppuccin
