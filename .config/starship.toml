@@ -1,30 +1,30 @@
 add_newline = false
 scan_timeout = 10
 
-format = """
-$username\
-$hostname\
-$directory\
-$git_branch\
-$git_state\
-$git_status\
-$cmd_duration\
-$line_break\
-$python\
-$line_break\
-$character"""
+[aws]
+symbol = "  "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
 
 [directory]
-style = "cyan"
+read_only = " "
+style = "blue"
 
-[character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](green)"
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
 
 [git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+symbol = " "
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
@@ -37,17 +37,38 @@ renamed = "​"
 deleted = "​"
 stashed = "≡"
 
-[git_state]
-format = '\([$state( $progress_current/$progress_total)]($style)\) '
-style = "bright-black"
+[golang]
+symbol = " "
 
-[cmd_duration]
-format = "[$duration]($style) "
-style = "yellow"
+#[haskell]
+#symbol = " "
 
-[python]
-format = "[$virtualenv]($style) "
-style = "bright-black"
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[rust]
+symbol = " "
 
 [line_break]
 disabled = true
