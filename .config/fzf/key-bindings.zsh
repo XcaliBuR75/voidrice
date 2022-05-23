@@ -71,9 +71,7 @@ bindkey -M viins '\el' fzf-file-widget
 
 # ALT-D - Paste the selected file path(s) into the command line
 __fsel1() {
-  local cmd="${FZF_ALT_D_COMMAND:-"command find -L $HOME -mindepth 1 \\( -path '*/\\.git*' -o -fstype 'sysfs' -o -fstype 'devfs' -o -fstype 'devtmpfs' -o -fstype 'proc' \\) -prune \
-    -o -type f -print \
-    -o -type l -print 2> /dev/null | cut -b2-"}"
+  local cmd="${FZF_ALT_D_COMMAND:-"command rg --hidden --no-config --files --glob '!\\.git*' --glob '!\\.npm*' 2>/dev/null $HOME"}"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local item
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore,tab:toggle-down,btab:toggle-up $FZF_DEFAULT_OPTS $FZF_ALT_D_OPTS" $(__fzfcmd) +m "$@" | while read item; do
@@ -90,7 +88,7 @@ __fzfcmd() {
 }
 
 fzf-file1-widget() {
-LBUFFER="v /${LBUFFER}$(__fsel1)"
+LBUFFER="v ${LBUFFER}$(__fsel1)"
   zle accept-line
   local ret=$?
   zle reset-prompt
