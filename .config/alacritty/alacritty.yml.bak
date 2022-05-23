@@ -93,7 +93,7 @@ schemes:
       black:   '#000000'
       red:     '#ff5555'
       green:   '#50fa7b'
-      yellow:  '#f1fa8c'
+      yellow:  '#F1FA8C'
       blue:    '#bd93f9'
       magenta: '#ff79c6'
       cyan:    '#8be9fd'
@@ -104,7 +104,7 @@ schemes:
       green:   '#5af78e'
       yellow:  '#f4f99d'
       blue:    '#caa9fa'
-      magenta: '#ff92d0'
+      magenta: '#ff92df'
       cyan:    '#9aedfe'
       white:   '#e6e6e6'
     dim:
@@ -145,15 +145,55 @@ schemes:
       cyan:    '#59dffc'
       white:   '#fcfcfa'
 
-      # Choose ONE color scheme from those available in the above list.
-colors: *monokai_pro
+  # Catppuccin!
+    # Default colors
+  catppuccin: &catppuccin
+    primary:
+      background: '#1E1D2F'
+      foreground: '#D9E0EE'
 
-background_opacity: 1.0
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '#1E1D2F'
+      cursor: '#F5E0DC'
+
+    # Normal colors
+    normal:
+      black:   '#6E6C7E'
+      red:     '#F28FAD'
+      green:   '#ABE9B3'
+      yellow:  '#FAE3B0'
+      blue:    '#96CDFB'
+      magenta: '#F5C2E7'
+      cyan:    '#89DCEB'
+      white:   '#D9E0EE'
+
+    # Bright colors
+    bright:
+      black:   '#988BA2'
+      red:     '#F28FAD'
+      green:   '#ABE9B3'
+      yellow:  '#FAE3B0'
+      blue:    '#96CDFB'
+      magenta: '#F5C2E7'
+      cyan:    '#89DCEB'
+      white:   '#D9E0EE'
+
+    indexed_colors:
+      - { index: 16, color: '#F8BD96' }
+      - { index: 17, color: '#F5E0DC' }
+
+      # Choose ONE color scheme from those available in the above list.
+colors: *catppuccin
+
+  #background_opacity: 1.0
+window:
+  opacity: 1.0
 
 font:
   normal:
     family: "JetBrains Mono Nerd Font"
-    style: Regular
+    style: Medium
   bold:
     family: "JetBrains Mono Nerd Font"
     style: Bold
@@ -165,7 +205,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 13.0
+  size: 16.0
 
   offset:
     x: 0
