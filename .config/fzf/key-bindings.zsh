@@ -71,7 +71,7 @@ bindkey -M viins '\el' fzf-file-widget
 
 # ALT-D - Paste the selected file path(s) into the command line
 __fsel1() {
-  local cmd="${FZF_ALT_D_COMMAND:-"command rg --hidden --no-config --files --glob '!\\.git*' --glob '!\\.npm*' 2>/dev/null $HOME"}"
+  local cmd="${FZF_ALT_D_COMMAND:-"command rg -u --hidden --no-config --files --glob '!\\.git*' --glob '!\\.npm*' 2>/dev/null $HOME"}"
   setopt localoptions pipefail no_aliases 2> /dev/null
   local item
   eval "$cmd" | FZF_DEFAULT_OPTS="--height ${FZF_TMUX_HEIGHT:-40%} --reverse --bind=ctrl-z:ignore,tab:toggle-down,btab:toggle-up $FZF_DEFAULT_OPTS $FZF_ALT_D_OPTS" $(__fzfcmd) +m "$@" | while read item; do
@@ -155,7 +155,7 @@ fzf-history-widget() {
   local ret=$?
   if [ -n "$selected" ]; then
     num=$selected[1]
-    zle accept-line
+#    zle accept-line
     if [ -n "$num" ]; then
       zle vi-fetch-history -n $num
     fi

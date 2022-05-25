@@ -75,7 +75,7 @@ export BAT_PAGER=""
 #export FZF_DEFAULT_COMMAND='ag --hidden --ignore .gitignore --ignore-dir .git -l -g ""'
 
 # Set the ripgrep as default FZF
-export FZF_DEFAULT_COMMAND="rg --hidden --no-config --files --glob '!.git*' --glob '!.npm*' --iglob '!history' 2>/dev/null"
+export FZF_DEFAULT_COMMAND="rg -u --hidden --no-config --files --glob '!.git*' --glob '!.npm*' --iglob '!history' 2>/dev/null"
 
 # Install npm packages globally without sudo
 NPM_PACKAGES="${HOME}/.npm-packages"
