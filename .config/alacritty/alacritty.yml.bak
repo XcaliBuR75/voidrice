@@ -192,16 +192,16 @@ window:
 
 font:
   normal:
-    family: "JetBrains Mono Nerd Font"
+    family: "Recursive Mono Casual Static"
     style: Medium
   bold:
-    family: "JetBrains Mono Nerd Font"
+    family: "Recursive Mono Casual Static"
     style: Bold
   italic:
-    family: "JetBrains Mono Nerd Font"
+    family: "Recursive Mono Casual Static"
     style: Italic
   bold_italic:
-    family: "JetBrains Mono Nerd Font"
+    family: "Recursive Mono Casual Static"
     style: Bold Italic
 
   # Point size

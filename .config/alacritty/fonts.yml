@@ -1,0 +1,29 @@
+# Font configuration
+
+font:
+  
+  normal:
+    family: "Recursive Mono Casual Static"
+    style: Medium
+
+  bold:
+    family: "Recursive Mono Casual Static"
+    style: Bold
+
+  italic:
+    family: "Recursive Mono Casual Static"
+    style: Italic
+
+  bold_italic:
+    family: "Recursive Mono Casual Static"
+    style: Bold Italic
+
+  # Point size
+  size: 16.0
+
+  offset:
+    x: 0
+    y: 0
+  glyph_offset:
+    x: 0
+    y: 0
