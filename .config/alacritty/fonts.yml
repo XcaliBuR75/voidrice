@@ -3,19 +3,19 @@
 font:
   
   normal:
-    family: "Recursive Mono Casual Static"
+    family: "Liga SFMono Nerd Font"
     style: Medium
 
   bold:
-    family: "Recursive Mono Casual Static"
+    family: "Liga SFMono Nerd Font"
     style: Bold
 
   italic:
-    family: "Recursive Mono Casual Static"
+    family: "Liga SFMono Nerd Font"
     style: Italic
 
   bold_italic:
-    family: "Recursive Mono Casual Static"
+    family: "Liga SFMono Nerd Font"
     style: Bold Italic
 
   # Point size
